@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SmartFAQ AI</string>
+    <string name="splash_tagline">Ask Anything, Get Instant Answers</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="get_started">Get Started</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_history">History</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_settings">Settings</string>
+    <string name="search_faqs">Search FAQs</string>
+    <string name="suggested_questions">Suggested questions</string>
+    <string name="categories">Explore categories</string>
+    <string name="category_questions">%1$d offline questions</string>
+    <string name="search_category">Search in this category</string>
+    <string name="no_category_results">No matching questions in this category</string>
+    <string name="full_answer">Answer</string>
+    <string name="add_favorite">Add to Favorites</string>
+    <string name="favorite_saved">Saved to Favorites</string>
+    <string name="recent_conversations">Recent conversations</string>
+    <string name="ask_anything">Ask anything…</string>
+    <string name="clear_chat">Clear chat</string>
+    <string name="clear_chat_confirmation">Delete this category’s conversation?</string>
+    <string name="empty_history">No conversations yet</string>
+    <string name="empty_favorites">No favorite answers yet</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="clear_history">Clear History</string>
+    <string name="about">About App</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="rate_app">Rate App</string>
+    <string name="about_message">SmartFAQ AI v1.0\nYour private, offline FAQ assistant.</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="no_answer">Sorry, I couldn\'t find an accurate answer. Please try asking differently.</string>
+</resources>

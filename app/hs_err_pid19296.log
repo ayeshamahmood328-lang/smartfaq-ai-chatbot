@@ -1,0 +1,216 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 132120576 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3552), pid=19296, tid=21352
+#
+# JRE version:  (17.0.19+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (17.0.19+9-LTS-183, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Djava.awt.headless=true -Djava.library.path=C:\Program Files\Java\jdk-17.0.19\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\AL KAREEM\AppData\Local\Programs\cursor\resources\app\node_modules\@vscode\ripgrep\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-25.0.2.10-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\nodejs\;D:\flutter_windows_3.44.1-stable\flutter\bin;D:\Git\cmd;C:\Users\AL KAREEM\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\AL KAREEM\AppData\Local\Programs\Python\Python311\;C:\Users\AL KAREEM\AppData\Local\Microsoft\WindowsApps;C:\Users\AL KAREEM\AppData\Local\Programs\Microsoft VS Code\bin;C:\iverilog\bin;C:\iverilog\gtkwave\bin;C:\Users\AL KAREEM\AppData\Local\Programs\Antigravity\bin;C:\Users\AL KAREEM\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\AL KAREEM\AppData\Roaming\npm;C:\Users\AL KAREEM\Downloads\antlr4-master\bin;C:\Users\AL KAREEM\AppData\Local\Android\Sdk\platform-tools;.;C:\Users\AL KAREEM\AndroidStudioProjects\SmartFAQAI\app\src\testDebug\jniLibs;C:\Users\AL KAREEM\AndroidStudioProjects\SmartFAQAI\app\src\test\jniLibs -Dorg.gradle.internal.worker.tmpdir=C:\Users\AL KAREEM\AndroidStudioProjects\SmartFAQAI\app\build\tmp\testDebugUnitTest\work --add-opens=java.base/java.io=ALL-UNNAMED -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -ea worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 1'
+
+Host: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.5915)
+Time: Sat Jul 18 17:34:50 2026 Pakistan Standard Time elapsed time: 0.015874 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001420088e0d0):  JavaThread "Unknown thread" [_thread_in_vm, id=21352, stack(0x0000001fa8f00000,0x0000001fa9000000)]
+
+Stack: [0x0000001fa8f00000,0x0000001fa9000000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67ee4a]
+V  [jvm.dll+0x7dedab]
+V  [jvm.dll+0x7e06ee]
+V  [jvm.dll+0x7e0d73]
+V  [jvm.dll+0x247b9f]
+V  [jvm.dll+0x67be49]
+V  [jvm.dll+0x670bb2]
+V  [jvm.dll+0x306ee0]
+V  [jvm.dll+0x306d82]
+V  [jvm.dll+0x30e516]
+V  [jvm.dll+0x35e08e]
+V  [jvm.dll+0x35e2bd]
+V  [jvm.dll+0x2ddd78]
+V  [jvm.dll+0x2dece8]
+V  [jvm.dll+0x7b1e0d]
+V  [jvm.dll+0x36bcc1]
+V  [jvm.dll+0x790d51]
+V  [jvm.dll+0x3f13bb]
+V  [jvm.dll+0x3f2e91]
+C  [jli.dll+0x5304]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17374]
+C  [ntdll.dll+0x4cc91]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffc4a3fca58, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000014202a2d4c0 GCTaskThread "GC Thread#0" [stack: 0x0000001fa9000000,0x0000001fa9100000] [id=11864]
+  0x0000014202a30300 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000001fa9100000,0x0000001fa9200000] [id=17912]
+  0x0000014202a30c20 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000001fa9200000,0x0000001fa9300000] [id=12580]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffc49c2ed77]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000142029dfcf0] Heap_lock - owner thread: 0x000001420088e0d0
+
+Heap address: 0x00000000e0000000, size: 512 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x00000000e0000000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffc4a017979]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.006 Loaded shared library C:\Program Files\Java\jdk-17.0.19\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff743270000 - 0x00007ff743280000 	C:\Program Files\Java\jdk-17.0.19\bin\java.exe
+0x00007ffca1a70000 - 0x00007ffca1c68000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffca06a0000 - 0x00007ffca0762000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffc9f3f0000 - 0x00007ffc9f6e6000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffc9f810000 - 0x00007ffc9f910000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffc87b20000 - 0x00007ffc87b39000 	C:\Program Files\Java\jdk-17.0.19\bin\jli.dll
+0x00007ffc88c70000 - 0x00007ffc88c8e000 	C:\Program Files\Java\jdk-17.0.19\bin\VCRUNTIME140.dll
+0x00007ffca1850000 - 0x00007ffca1901000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffca0f60000 - 0x00007ffca0ffe000 	C:\Windows\System32\msvcrt.dll
+0x00007ffca0990000 - 0x00007ffca0a2f000 	C:\Windows\System32\sechost.dll
+0x00007ffca0040000 - 0x00007ffca0160000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffc9f3c0000 - 0x00007ffc9f3e7000 	C:\Windows\System32\bcrypt.dll
+0x00007ffca0d30000 - 0x00007ffca0ed1000 	C:\Windows\System32\USER32.dll
+0x00007ffc898d0000 - 0x00007ffc89b6b000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.6456_none_60b8a6cb71f64256\COMCTL32.dll
+0x00007ffc9f180000 - 0x00007ffc9f1a2000 	C:\Windows\System32\win32u.dll
+0x00007ffca0d00000 - 0x00007ffca0d2b000 	C:\Windows\System32\GDI32.dll
+0x00007ffc9f6f0000 - 0x00007ffc9f809000 	C:\Windows\System32\gdi32full.dll
+0x00007ffc9f9f0000 - 0x00007ffc9fa8d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffc97be0000 - 0x00007ffc97bea000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffca0660000 - 0x00007ffca068f000 	C:\Windows\System32\IMM32.DLL
+0x00007ffc89f90000 - 0x00007ffc89f9c000 	C:\Program Files\Java\jdk-17.0.19\bin\vcruntime140_1.dll
+0x00007ffc75110000 - 0x00007ffc7519d000 	C:\Program Files\Java\jdk-17.0.19\bin\msvcp140.dll
+0x00007ffc49940000 - 0x00007ffc4a525000 	C:\Program Files\Java\jdk-17.0.19\bin\server\jvm.dll
+0x00007ffca0cf0000 - 0x00007ffca0cf8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffc89cc0000 - 0x00007ffc89cc9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffc97d50000 - 0x00007ffc97d77000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffca0920000 - 0x00007ffca098b000 	C:\Windows\System32\WS2_32.dll
+0x00007ffc9d960000 - 0x00007ffc9d972000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffc88dc0000 - 0x00007ffc88dca000 	C:\Program Files\Java\jdk-17.0.19\bin\jimage.dll
+0x00007ffc99cb0000 - 0x00007ffc99eb1000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffc7ac70000 - 0x00007ffc7aca4000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffc9f910000 - 0x00007ffc9f992000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffc874b0000 - 0x00007ffc874d6000 	C:\Program Files\Java\jdk-17.0.19\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-17.0.19\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.6456_none_60b8a6cb71f64256;C:\Program Files\Java\jdk-17.0.19\bin\server
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Djava.library.path=C:\Program Files\Java\jdk-17.0.19\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\AL KAREEM\AppData\Local\Programs\cursor\resources\app\node_modules\@vscode\ripgrep\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-25.0.2.10-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\nodejs\;D:\flutter_windows_3.44.1-stable\flutter\bin;D:\Git\cmd;C:\Users\AL KAREEM\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\AL KAREEM\AppData\Local\Programs\Python\Python311\;C:\Users\AL KAREEM\AppData\Local\Microsoft\WindowsApps;C:\Users\AL KAREEM\AppData\Local\Programs\Microsoft VS Code\bin;C:\iverilog\bin;C:\iverilog\gtkwave\bin;C:\Users\AL KAREEM\AppData\Local\Programs\Antigravity\bin;C:\Users\AL KAREEM\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\AL KAREEM\AppData\Roaming\npm;C:\Users\AL KAREEM\Downloads\antlr4-master\bin;C:\Users\AL KAREEM\AppData\Local\Android\Sdk\platform-tools;.;C:\Users\AL KAREEM\AndroidStudioProjects\SmartFAQAI\app\src\testDebug\jniLibs;C:\Users\AL KAREEM\AndroidStudioProjects\SmartFAQAI\app\src\test\jniLibs -Dorg.gradle.internal.worker.tmpdir=C:\Users\AL KAREEM\AndroidStudioProjects\SmartFAQAI\app\build\tmp\testDebugUnitTest\work --add-opens=java.base/java.io=ALL-UNNAMED -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -ea 
+java_command: worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 1'
+java_class_path (initial): C:\Users\AL KAREEM\AppData\Local\Temp\cursor-sandbox-cache\ad26edef935bd69e83dedbc397f6b277\gradle\caches\8.13\workerMain\gradle-worker.jar;C:\Users\AL KAREEM\AndroidStudioProjects\SmartFAQAI\app\build\tmp\kotlin-classes\debugUnitTest;C:\Users\AL KAREEM\AndroidStudioProjects\SmartFAQAI\app\build\intermediates\java_res\debugUnitTest\processDebugUnitTestJavaRes\out;C:\Users\AL KAREEM\AndroidStudioProjects\SmartFAQAI\app\build\intermediates\runtime_app_classes_jar\debug\bundleDebugClassesToRuntimeJar\classes.jar;C:\Users\AL KAREEM\AppData\Local\Temp\cursor-sandbox-cache\ad26edef935bd69e83dedbc397f6b277\gradle\caches\modules-2\files-2.1\junit\junit\4.13.2\8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12\junit-4.13.2.jar;C:\Users\AL KAREEM\AppData\Local\Temp\cursor-sandbox-cache\ad26edef935bd69e83dedbc397f6b277\gradle\caches\8.13\transforms\b09e31a4c69b051759236b6a4b26b3a0\transformed\viewbinding-8.13.2-runtime.jar;C:\Users\AL KAREEM\AppData\Local\Temp\cursor-sandbox-cache\ad26edef935bd69e83dedbc397f6b277\gradle\caches\8.13\transforms\edc07481da035445864d7f0329b34a39\transformed\navigation-common-2.8.5-runtime.jar;C:\Users\AL KAREEM\AppData\Local\Temp\cursor-sandbox-cache\ad26edef935bd69e83dedbc397f6b277\gradle\caches\8.13\transforms\79faec267cd8dd26bfe712f870d8f108\transformed\navigation-common-ktx-2.8.5-runtime.jar;C:\Users\AL KAREEM\AppData\Local\Temp\cursor-sandbox-cache\ad26edef935bd69e83dedbc397f6b277\gradle\caches\8.13\transforms\bfd8a6166f96b16d8e07a94c10f5950f\transformed\navigation-runtime-2.8.5-runtime.jar;C:\Users\AL KAREEM\AppData\Local\Temp\cursor-sandbox-cache\ad26edef935bd69e83dedbc397f6b277\gradle\caches\8.13\transforms\6c5ac14838522b15407aa0befdfbfe32\transformed\navigation-runtime-ktx-2.8.5-runtime.jar;C:\Users\AL KAREEM\AppData\Local\Temp\cursor-sandbox-cache\ad26edef935bd69e83dedbc397f6b277\gradle\caches\8.13\transforms\0d368053cb474a3adbc88c04de907461\transformed\navigation-fragment-2.8.5-runtime.jar;C:\Users\AL KAREEM\AppData\L
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 132120576                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 536870912                                 {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 536870912                              {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=c:\Users\AL KAREEM\AppData\Local\Programs\cursor\resources\app\node_modules\@vscode\ripgrep\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-25.0.2.10-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\nodejs\;D:\flutter_windows_3.44.1-stable\flutter\bin;D:\Git\cmd;C:\Users\AL KAREEM\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\AL KAREEM\AppData\Local\Programs\Python\Python311\;C:\Users\AL KAREEM\AppData\Local\Microsoft\WindowsApps;C:\Users\AL KAREEM\AppData\Local\Programs\Microsoft VS Code\bin;C:\iverilog\bin;C:\iverilog\gtkwave\bin;C:\Users\AL KAREEM\AppData\Local\Programs\Antigravity\bin;C:\Users\AL KAREEM\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\AL KAREEM\AppData\Roaming\npm;C:\Users\AL KAREEM\Downloads\antlr4-master\bin;C:\Users\AL KAREEM\AppData\Local\Android\Sdk\platform-tools
+USERNAME=AL KAREEM
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.5915)
+OS uptime: 15 days 18:55 hours
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 10 microcode 0xf4, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt
+
+Memory: 4k page, system-wide physical 8050M (396M free)
+TotalPageFile size 23050M (AvailPageFile size 19M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 59M, peak: 185M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (17.0.19+9-LTS-183) for windows-amd64 JRE (17.0.19+9-LTS-183), built on Mar 11 2026 01:59:45 by "mach5run" with MS VC++ 17.13 (VS2022)
+
+END.
